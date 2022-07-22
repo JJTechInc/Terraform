@@ -1,0 +1,16 @@
+TF_LOG --> TRACE, DEBUG, INFO, WARN or ERROR
+
+export TF_LOG=TRACE
+
+export TF_LOG_PATH=/Users/avinashmamidi/Documents/work/JJTech-Reinvent-Batch/Terraform/variables/trace.log
+
+#############
+
+terraform fmt
+
+############
+
+terraform validate
+
+############
+

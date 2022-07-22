@@ -1,0 +1,41 @@
+Terraform Taint:
+
+You have created a new resource via terraform
+
+users have made a lot of changes (both infra and inside the server)
+
+two ways to deal with this: Import the changes to terraform /delete & recreate the resource
+
+terraform taint command manually marks a terraform managed resource as tainted , forcing it to be destroyed and recretad on next apply
+
+terraform taint aws_instance.test
+
+
+
+tfstate : t2.micro
+terraform :t2.micro
+
+
+--> aws console : t2.medium
+
+tf refresh
+
+tfstate : t2.medium
+change code in terraform
+
+
+
+
+terraform :t2.micro
+tfstate : t2.micro
+
+--> aws console : t3.medium
+
+tf taint on above ec2 resource
+
+tf plan / apply
+
+ec2 t3.medium resource get killed and recreate with resource match config from tfstate
+
+--> terraform : t2.micro
+
