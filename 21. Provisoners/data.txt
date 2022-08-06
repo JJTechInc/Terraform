@@ -1,0 +1,5 @@
+sudo amazon-linux-extras install nginx1
+
+systemctl start nginx
+
+systemctl status nginx
